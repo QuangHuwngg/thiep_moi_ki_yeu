@@ -1,0 +1,37 @@
+.share-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.copy-btn{padding:8px 12px;border:1px solid #e3e3e3;border-radius:8px;background:#fff;cursor:pointer}
+.invite-card .invite-name{word-break:break-word}
+
+
+
+#invite-content {
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.door-wrap {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 9999;
+  display: flex;
+  overflow: hidden;
+}
+
+.door-door {
+  width: 50%;
+  height: 100%;
+  transition: transform 1.8s ease-in-out;
+}
+
+.door-wrap.open .left {
+  transform: translateX(-100%);
+}
+
+.door-wrap.open .right {
+  transform: translateX(100%);
+}
+
+.door-wrap.open + #invite-content {
+  opacity: 1;
+}
